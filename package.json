@@ -1,0 +1,11 @@
+{
+  "name": "myNearestBikes",
+  "description": "Get the nearest bikes at the area bay in San Fransisco",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "body-parser": "~1.0.0",
+    "ejs" : "*"
+  }
+}
