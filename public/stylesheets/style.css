@@ -1,0 +1,191 @@
+/* Main component */
+
+html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	text-align: center;
+	background-color: #0d7ad1;
+	text-align: :center;
+	padding: 15px;
+	color:#fff;
+	margin-top: 0;
+	z-index:300;
+	position: relative;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+
+/*Reusable*/
+.clear{
+	clear: both;
+}
+.alignRight {
+	text-align: right;
+}
+
+/*LOADER*/
+#loader{
+    text-align: center;
+}
+/*FIRST PAGE : STATION LIST*/
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+ul li {
+	padding: 5px;
+    width: 100%;
+	border-bottom: 1px #ece5e5 solid;
+}
+ul li:active {
+	background-color: #e2eca9;
+}
+dd {
+    margin-left: 0px;
+    color:#a4a4a4;
+    font-size: 12px;
+}
+.bikes{
+	font-size: 18px;
+	font-weight: bold;
+    padding: 15px;
+}
+.picto{
+    margin-left: 10px;
+}
+.highlight{
+	color:#0070cd;
+}
+
+/*SECOND PAGE : ONE STATION*/
+#stationPage{
+	background-color: #fff;
+}
+#pluralize {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+#back{
+	background-color: #e9e9e9;
+	background-image: url('../images/arrow.png');
+	background-repeat: no-repeat;
+	background-position:5px 25px; 
+	color:#7c7c7c;
+	padding-left: 12px;
+	padding:20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+/*map presentation*/
+.angular-google-map-container {
+    width: 100%;
+    height: 400px;
+}
+
+/* fix for Twitter Bootstrap handling of responsive images */
+.angular-google-map img {
+    max-width: inherit;
+}
+.marker-labels {
+    color: red;
+    background-color: white;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+/*PAGE ANIMATION*/
+
+.slide-left.ng-enter,  
+.slide-left.ng-leave,  
+.slide-right.ng-enter,  
+.slide-right.ng-leave {  
+    position: absolute;  
+    right: 0; bottom: 0; left: 0;  
+    background: inherit;  
+    -ms-transition: 1.25s ease-in-out;  
+    -webkit-transition: 1.25s ease-in-out;  
+    transition:  1.25s ease-in-out;  
+}  
+.slide-left.ng-enter {  
+    z-index: 101;  
+    -webkit-transform: translateX(100%);  
+    transform: translateX(100%);  
+}  
+.slide-left.ng-enter.ng-enter-active {  
+    -webkit-transform: translateX(0);  
+    transform: translateX(0);  
+}  
+.slide-left.ng-leave {  
+    z-index: 100;  
+    -webkit-transform: translateX(0);  
+    transform: translateX(0);  
+}  
+.slide-left.ng-leave.ng-leave-active {  
+    -webkit-transform: translateX(-100%);  
+    transform: translateX(-100%);  
+}  
+.slide-right.ng-enter {  
+    z-index: 100;  
+    -webkit-transform: translateX(-100%);  
+    transform: translateX(-100%);  
+}  
+.slide-right.ng-enter.ng-enter-active {  
+    -webkit-transform: translateX(0);  
+    transform: translateX(0);  
+}  
+.slide-right.ng-leave {  
+    z-index: 101;  
+    -webkit-transform: translateX(0);  
+    transform: translateX(0);  
+}  
+.slide-right.ng-leave.ng-leave-active {  
+    -webkit-transform: translateX(100%);  
+    transform: translateX(100%);  
+}  
+
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 979px) {
+  .row-fluid .span10 {
+    width:40%;
+    float: left;
+  }
+  .row-fluid .span2{
+    width:40%;
+    margin-left: 0%;
+    float: right;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .angular-google-map-container {
+    height: 300px;
+  }
+  .container-fluid {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 679px) {
+
+    .angular-google-map-container {
+        height: 200px;
+    }
+}
